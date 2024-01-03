@@ -58,6 +58,12 @@ nav a {
     font-weight: bold;
 }
 
+.logo-project-item img,
+.more-project-item img {
+    width: 100%;
+    height: auto;
+}
+
 /* New styles for mobile and tablet screens */
 @media screen and (max-width: 768px) {
     .header-content {
