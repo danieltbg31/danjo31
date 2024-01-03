@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="logo.css">
+    <style>
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo-project h2 {
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+    </style>
+    <title>Logo Project</title>
+
+    <script>
+        function toggleNav() {
+            var navElement = document.querySelector('nav ul');
+            navElement.classList.toggle('show');
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- Text Logo -->
+                <div class="logo">
+                    <h1>DANJO.</h1>
+                </div>
+                <!-- End Text Logo -->
+                <!-- Menu -->
+                <nav>
+                    <div class="nav-toggle" onclick="toggleNav()">
+                        <div class="menu-bar"></div>
+                        <div class="menu-bar"></div>
+                        <div class="menu-bar"></div>
+                    </div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="portfolio page.html">Portfolio</a></li>
+                        <li><a href="asset/pdf/Resume.pdf" target="_blank">Resume</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- End Menu -->
+            </div>
+        </div>
+    </header>
+
+    <section class="logo-project">
+        <div class="container">
+            <h2>Logo Project</h2>
+            <div class="logo-projects-container">
+                <!-- Logo Project 1 -->
+                <div class="logo-project-item">
+                    <img src="asset/img/Logo 1.png" alt="Logo Project 1">
+                </div>
+                <!-- Logo Project 2 -->
+                <div class="logo-project-item">
+                    <img src="asset/img/Logo 2.png" alt="Logo Project 2">
+                </div>
+                <!-- Logo Project 3 -->
+                <div class="logo-project-item">
+                    <img src="asset/img/Logo 3.png" alt="Logo Project 3">
+                </div>
+                <!-- Add more logo projects as needed -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+</body>
+
+</html>

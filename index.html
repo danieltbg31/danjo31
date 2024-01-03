@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>DANJO PORTFOLIO-HOMEPAGE</title>
+
+    <script>
+        function toggleNav() {
+            var navElement = document.querySelector('nav ul');
+            navElement.style.display = (navElement.style.display === 'flex') ? 'none' : 'flex';
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- Updated: Text Logo -->
+                <div class="logo">
+                    <h1>DANJO.</h1>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            // Your target element
+                            var logoElement = document.querySelector('.logo h1');
+
+                            // Add the 'fade-in' class to trigger the fade-in effect
+                            setTimeout(function () {
+                                logoElement.classList.add('fade-in');
+                            }, 1000); // Adjust the delay as needed
+                        });
+                    </script>
+                </div>
+                <!-- End Updated -->
+                <!-- New: Menu -->
+                <nav>
+                    <div class="nav-toggle" onclick="toggleNav()">
+                        <div class="menu-bar"></div>
+                        <div class="menu-bar"></div>
+                        <div class="menu-bar"></div>
+                    </div>
+                    <ul>
+                        <li><a href="portfolio page.html">Portfolio</a></li>
+                        <li><a href="asset/pdf/Resume.pdf" target="_blank">Resume</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                // Your target element
+                                var navElement = document.querySelector('nav');
+
+                                // Add the 'fade-in' class to trigger the fade-in effect
+                                setTimeout(function () {
+                                    navElement.classList.add('fade-in');
+                                }, 1000); // Adjust the delay as needed
+                            });
+                        </script>
+                    </ul>
+                </nav>
+                <!-- End New -->
+            </div>
+            <!-- New: Container for Title and Description with Photo -->
+            <div class="title-and-description">
+                <div class="description-container">
+                    <h1 id="typewriter-title"></h1>
+                    <p id="typewriter-description"></p>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            // Your target elements
+                            var titleElement = document.getElementById('typewriter-title');
+                            var descriptionElement = document.getElementById('typewriter-description');
+
+                            // Texts to be displayed
+                            var titleText = "Hi, I'm Daniel Johannes Tobing (DANJO)";
+                            var descriptionText = "a Graphic Designer, Photographer, Videographer, Editor";
+
+                            // Function for typewriter effect
+                            function typeWriter(text, element, delay) {
+                                var i = 0;
+                                var interval = setInterval(function () {
+                                    element.innerHTML += text.charAt(i);
+                                    i++;
+                                    if (i > text.length) {
+                                        clearInterval(interval);
+                                    }
+                                }, delay);
+                            }
+
+                            // Trigger the typewriter effect for title and description
+                            typeWriter(titleText, titleElement, 100);
+
+                            setTimeout(function () {
+                                descriptionElement.innerHTML = ''; // Clear the initial content
+                                typeWriter(descriptionText, descriptionElement, 50);
+                            }, titleText.length * 100); // Wait for the title to complete before starting the description
+                        });
+                    </script>
+                    <!-- New: "Lihat Lainnya" Button -->
+                    <button class="see-more-button" onclick="redirectToPortfolio()">My Portflio</button>
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            // Your target element
+                            var buttonElement = document.querySelector('.see-more-button');
+
+                            // Add the 'fade-in' class to trigger the fade-in effect
+                            setTimeout(function () {
+                                buttonElement.classList.add('fade-in');
+                            }, 2000); // Adjust the delay as needed
+                        });
+                    </script>
+
+                    <script>
+                        function redirectToPortfolio() {
+                            // Ganti URL berikut dengan URL halaman portofolio Anda
+                            window.location.href = "portfolio page.html";
+                        }
+                    </script>
+                </div>
+                <div class="photo">
+                    <!-- Your photo goes here -->
+                    <img src="asset/img/your-photo.png" alt="Your Photo">
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            // Your target element
+                            var photoElement = document.querySelector('.photo');
+
+                            // Add the 'fade-in' class to trigger the fade-in effect
+                            setTimeout(function () {
+                                photoElement.classList.add('fade-in');
+                            }, 1000); // Adjust the delay as needed
+                        });
+                    </script>
+                </div>
+            </div>
+            <!-- End New -->
+        </div>
+    </header>
+</body>
+
+</html>

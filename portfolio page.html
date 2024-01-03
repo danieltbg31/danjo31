@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Portfolio</title>
+
+    <script>
+        function toggleNav() {
+            var navElement = document.querySelector('nav ul');
+            navElement.classList.toggle('show');
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <!-- Updated: Text Logo -->
+                <div class="logo">
+                    <h1>DANJO.</h1>
+                </div>
+                <!-- End Updated -->
+                <!-- New: Menu -->
+                <nav>
+                    <div class="nav-toggle" onclick="toggleNav()">
+                        <div class="menu-bar"></div>
+                        <div class="menu-bar"></div>
+                        <div class="menu-bar"></div>
+                    </div>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="asset/pdf/Resume.pdf" target="_blank">Resume</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- End New -->
+            </div>
+        </div>
+    </header>
+
+    <section class="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="projects-container">
+                <!-- Example Project 1 -->
+                <div class="project">
+                    <a href="Logo.html">
+                        <img src="asset/img/project 1.png" alt="Project 1">
+                    </a>
+                    <h3>Logo</h3>
+                </div>
+
+                <!-- Example Project 2 -->
+                <div class="project">
+                    <img src="asset/img/project 2.png" alt="Project 2">
+                    <h3>Instagram Feed </h3>
+                </div>
+                <!-- Example Project 3  -->
+                <div class="project">
+                    <img src="asset/img/project 3.png" alt="Project 3">
+                    <h3>T-Shirt </h3>
+                </div>
+                <!-- Example Project 4 -->
+                <div class="project">
+                    <img src="asset/img/project 4.png" alt="Project 4">
+                    <h3>Photo</h3>
+                </div>
+                <!-- Example Project 5 -->
+                <div class="project">
+                    <img src="asset/img/project 5.png" alt="Project 5">
+                    <h3>Motion</h3>
+                </div>
+                <!-- Example Project 6 -->
+                <div class="project">
+                    <img src="asset/img/project 6.png" alt="Project 6">
+                    <h3>Video/Filming</h3>
+                </div>
+
+                <!-- Add more projects as needed -->
+
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

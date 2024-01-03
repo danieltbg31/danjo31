@@ -1,0 +1,230 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    margin: 0; /* Tambahkan margin: 0; untuk menghilangkan margin default */
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #181818;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: rgb(24, 24, 24);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ffffff;
+    opacity: 0; /* Set opacity to 0 by default */
+    transform: translateX(-20px); /* Move the logo text 20px to the left by default */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Add transition for opacity and transform */
+}
+
+.logo h1.fade-in {
+    opacity: 1; /* Change opacity to 1 for fade-in effect */
+    transform: translateX(0); /* Move the logo text back to its original position */
+}
+
+nav {
+    /* Added margin-top for spacing */
+    margin-top: 20px;
+    opacity: 0; /* Set opacity to 0 by default */
+    transform: translateX(20px); /* Move the menu 20px to the right by default */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Add transition for opacity and transform */
+}
+
+nav.fade-in {
+    opacity: 1; /* Change opacity to 1 for fade-in effect */
+    transform: translateX(0); /* Move the menu back to its original position */
+}
+
+/* Tambahkan gaya khusus untuk menu navigasi responsif */
+.nav-toggle {
+    display: none; /* Sembunyikan tombol toggle di desktop */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Added display:flex for better alignment */
+    justify-content: center; /* Centered navigation items */
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Gaya menu toggle yang muncul di perangkat seluler */
+.menu-toggle {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+}
+
+
+.main-content {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 50px 20px; /* Adjusted padding for smaller screens */
+}
+
+.cta {
+    background-color: #031d2e;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px; /* Adjusted padding for smaller screens */
+}
+
+/* New Styles for Responsive Layout */
+.title-and-description {
+    display: flex;
+    justify-content: space-between; /* Menyusun elemen-elemen berdampingan */
+    align-items: center; /* Menengahkan elemen-elemen secara vertikal */
+    flex-wrap: wrap; /* Memberikan efek wrap jika lebar container tidak cukup */
+
+}
+
+.title-container, .description-container, .photo, .see-more-button {
+    flex-basis: calc(33.33% - 20px); /* Setiap elemen mendapatkan 1/3 dari lebar container dengan sedikit ruang di antara mereka */
+    margin: 10px; /* Menambahkan margin di antara elemen-elemen */
+}
+
+.title-container, .description-container {
+    text-align: left; /* Mengubah posisi teks ke kiri */
+    font-size: 28px; /* Menambahkan properti font-size untuk memperbesar judul dan deskripsi */
+}
+
+.photo {
+    margin: 600px 40; 
+}   
+
+.photo {
+    opacity: 0; /* Set opacity to 0 by default */
+    transform: translateY(20px); /* Move the photo 20px down by default */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Add transition for opacity and transform */
+}
+
+.photo.fade-in {
+    opacity: 1; /* Change opacity to 1 for fade-in effect */
+    transform: translateY(0); /* Move the photo back to its original position */
+}
+
+.photo img {
+    max-width: 210%; /* Adjusted for smaller screens */
+    height: 970px;
+    margin-right: 550px;
+}
+
+footer {
+    background-color: #f3730b;
+    color: #fff;
+    text-align: center;
+    padding: 5000px 20px; /* Adjusted padding for smaller screens */
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav {
+        margin-top: 0;
+        order: 1;
+
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        display: none;
+
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        order: 0;
+    }
+
+    .photo {
+        display: none; /* Menyembunyikan foto pada tampilan seluler */
+    }
+
+    .nav-toggle {
+        display: block; /* Tampilkan tombol toggle di perangkat seluler */
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 2;
+    }
+}
+
+.see-more-button {
+    display: inline-block;
+    padding: 15px 30px; /* Anda dapat menyesuaikan nilai padding untuk memberikan ruang tambahan di sekitar teks tombol */
+    font-family: Poppins, sans-serif;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    text-decoration: none;
+    background-color: #f3730b;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    width: 200px; /* Atur lebar sesuai keinginan Anda */
+    height: 60px; /* Atur tinggi sesuai keinginan Anda */
+}
+
+.see-more-button {
+    opacity: 0; /* Set opacity to 0 by default */
+    transform: translateX(-20px); /* Move the button 20px to the left by default */
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Add transition for opacity and transform */
+}
+
+.see-more-button.fade-in {
+    opacity: 1; /* Change opacity to 1 for fade-in effect */
+    transform: translateX(0); /* Move the button back to its original position */
+}
